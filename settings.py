@@ -67,8 +67,5 @@ else:
     LOG_LEVEL = logging.INFO
 USE_SYSLOG = DEPLOYMENT != DeploymentType.SOLO
 
-logconfig.initialize_logging(SYSLOG_TAG, SYSLOG_FACILITY, LOGGERS,
-        LOG_LEVEL, USE_SYSLOG)
-
 if options.config:
     tornado.options.parse_config_file(options.config)
